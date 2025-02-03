@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("Camera 2").GetComponent<Camera>().enabled = false;
         scoreText.text = "Score: 0";
         
     }
