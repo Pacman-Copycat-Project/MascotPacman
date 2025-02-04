@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour
     {
         GameObject.Find("Camera 2").GetComponent<Camera>().enabled = false;
         scoreText.text = "Score: 0";
-        
     }
 
     // Update is called once per frame
