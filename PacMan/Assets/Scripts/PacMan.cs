@@ -50,15 +50,12 @@ public class PacMan : MonoBehaviour
         Debug.Log("peace activated");
     }
 
-    //void onTriggerEnter2D(Collider2D other)
-   // {
-    //    if (other.CompareTag("Player"))
-      //  {
-      //          SceneManager.LoadScene(2);
-      //          Debug.Log("testy");
-     //   }
-   // }
-    /*      Vector2 position = rigidbody2d.position;
-        position.x = position.x + speed * horizontal * Time.deltaTime;
-        position.y = position.y + speed * vertical * Time.deltaTime;*/
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Node"))
+        {
+            Destroy(other.gameObject);
+            currentScore();
+        }
+    }
 }

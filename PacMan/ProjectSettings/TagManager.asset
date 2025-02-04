@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Walls
   - roomexit1
+  - Node
   layers:
   - Default
   - TransparentFX
