@@ -59,6 +59,13 @@ public class PacMan : MonoBehaviour
             Destroy(collision.gameObject);
             GameObject.Find("Game Controller").GetComponent<GameController>().UpScore();
         }
+
+        if(collision.gameObject.tag == "Walls")
+        {
+            //Destroy(collision.gameObject);
+            Debug.Log("hit the wall");
+           // GameObject.Find("Game Controller").GetComponent<GameController>().UpScore();
+        }
     }
 
 }
