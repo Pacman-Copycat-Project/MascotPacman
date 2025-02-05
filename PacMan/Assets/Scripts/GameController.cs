@@ -12,12 +12,20 @@ public class GameController : MonoBehaviour
 
     public Button StartBut;
     public Button QuitBut;
-    
+    public GameObject winScreen;
+    public GameObject GameOverScreen;
+     public AudioSource audioSource;
+     public AudioClip WinMusic;
+     public AudioClip LoseMusic;
+     public AudioClip StartMusic;
     // Start is called before the first frame update
     void Start()
     {
         GameObject.Find("Camera 2").GetComponent<Camera>().enabled = false;
         scoreText.text = "Score: 0";
+        winScreen.SetActive(false);
+        GameOverScreen.SetActive(false);
+        audioSource.PlayOneShot(StartMusic);
     }
 
     // Update is called once per frame
@@ -38,6 +46,12 @@ public class GameController : MonoBehaviour
     {
         scoreCount++;
         scoreText.text = "Score:  " + scoreCount;
+        if (scoreCount > 3)
+        {
+            winScreen.SetActive(true);
+            audioSource.PlayOneShot(WinMusic);
+            //SceneManager.LoadScene("")
+        }
     }
     public void StartGame()
     {
@@ -48,5 +62,11 @@ public class GameController : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
+    public void GameOver()
+    {
+        audioSource.PlayOneShot(LoseMusic);
+        GameOverScreen.SetActive(true);
+    }
+      
 }
