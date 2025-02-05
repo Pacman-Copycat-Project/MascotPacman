@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
                 WallsController character = hit.collider.GetComponent<WallsController>();
                 if (character != null)
                 {
-                    Debug.Log("Hit something");
+                    //Debug.Log("Hit something");
                     vertical = !vertical;
                 }
             }
