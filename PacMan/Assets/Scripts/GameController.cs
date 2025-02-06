@@ -41,12 +41,12 @@ public class GameController : MonoBehaviour
     {
         scoreCount++;
         scoreText.text = "Score:  " + scoreCount;
-        if (scoreCount > 3 && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1"))
+        if (GameObject.FindGameObjectsWithTag("Pellet").Length - 1 <= 0 && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1"))
         {
             Destroy(pac);
             audioSource.PlayOneShot(WinMusic);
             SceneManager.LoadScene("Level2");
-        } else if (scoreCount > 10) 
+        } else if (GameObject.FindGameObjectsWithTag("Pellet").Length - 1 <= 0 && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2")) 
         {
             Destroy(pac);
             winScreen.SetActive(true);
