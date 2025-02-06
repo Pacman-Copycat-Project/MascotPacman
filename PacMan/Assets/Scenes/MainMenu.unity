@@ -320,8 +320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 186.50284, y: -260.67}
-  m_SizeDelta: {x: 106.9634, y: 43.0437}
+  m_AnchoredPosition: {x: 496.62927, y: -522.8344}
+  m_SizeDelta: {x: 250.222, y: 102.0325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &196758867
 GameObject:
@@ -463,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.3735, y: -259.3332}
-  m_SizeDelta: {x: 151.1699, y: 40.3736}
+  m_AnchoredPosition: {x: 46.438232, y: -515.87634}
+  m_SizeDelta: {x: 300.0463, y: 88.1263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &465714840
 MonoBehaviour:
@@ -595,7 +595,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.000030518}
-  m_SizeDelta: {x: 600, y: 600}
+  m_SizeDelta: {x: 1600, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834572985
 MonoBehaviour:
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 578cb3ee93149544fb58838667b24c6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d25f3c2f2072ce4e8fc169c744c1ee0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -750,7 +750,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -918,6 +918,12 @@ MonoBehaviour:
   pac: {fileID: 0}
   StartBut: {fileID: 465714842}
   QuitBut: {fileID: 45083795}
+  winScreen: {fileID: 0}
+  GameOverScreen: {fileID: 0}
+  audioSource: {fileID: 0}
+  WinMusic: {fileID: 0}
+  LoseMusic: {fileID: 0}
+  StartMusic: {fileID: 0}
 --- !u!4 &1897621938
 Transform:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("Camera 2").GetComponent<Camera>().enabled = false;
+        //GameObject.Find("Camera 2").GetComponent<Camera>().enabled = false;
         scoreText.text = "Score: 0";
         winScreen.SetActive(false);
         GameOverScreen.SetActive(false);
@@ -31,11 +31,6 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-           Debug.Log("C was pressed");
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
@@ -46,11 +41,16 @@ public class GameController : MonoBehaviour
     {
         scoreCount++;
         scoreText.text = "Score:  " + scoreCount;
-        if (scoreCount > 3)
+        if (scoreCount > 3 && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1"))
         {
+            Destroy(pac);
+            audioSource.PlayOneShot(WinMusic);
+            SceneManager.LoadScene("Level2");
+        } else if (scoreCount > 10) 
+        {
+            Destroy(pac);
             winScreen.SetActive(true);
             audioSource.PlayOneShot(WinMusic);
-            //SceneManager.LoadScene("")
         }
     }
     public void StartGame()

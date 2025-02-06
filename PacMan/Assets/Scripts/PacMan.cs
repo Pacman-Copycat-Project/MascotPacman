@@ -11,7 +11,6 @@ public class PacMan : MonoBehaviour
     private float horizontal;
     private float vertical;
     public float speed = 6.0f;
-    public int score = 0;
     Vector2 lookDirection = new Vector2(1, 0);
 
     void Start()
@@ -42,16 +41,6 @@ public class PacMan : MonoBehaviour
   
     }
 
-    public void currentScore()
-    {
-        score++;
-    }
-
-    public void peace()
-    {
-        Debug.Log("peace activated");
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Pellet")
@@ -62,10 +51,8 @@ public class PacMan : MonoBehaviour
 
         if(collision.gameObject.tag == "Walls")
         {
-            //Destroy(collision.gameObject);
-            Debug.Log("hit the wall");
-           // GameObject.Find("Game Controller").GetComponent<GameController>().UpScore();
+            
         }
-    }
 
+    }
 }

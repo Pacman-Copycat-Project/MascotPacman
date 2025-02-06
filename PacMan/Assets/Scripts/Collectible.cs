@@ -24,7 +24,6 @@ public class Collectible : MonoBehaviour
         if (controller != null)
         {
             Destroy(gameObject);
-            controller.currentScore();
             gameCon.UpScore();
             /*if (controller.health < controller.maxHealth)
             {
